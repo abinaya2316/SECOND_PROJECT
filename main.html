@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ShopZone</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .cart-button {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        a 
+        {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://imgs.search.brave.com/e0Uwbx90KOIp_5Zvx9JJMwOi2K1v2Xk71tLBYwQQdws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/MzQzNzkxMy9waG90/by9vbmxpbmUtc2hv/cHBpbmctY2FydC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cVk1WDJoMmtrcTZm/WnpISnB5U3IyQjZ0/OG02RXFKZG5DTFd4/b09YYWJlRT0" class="logo">
+                <h1>ShopZone</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="review.html"><i class="fas fa-book"></i> Review</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <button class="cart-button" onclick="viewCart()">View Cart</button>
+
+    <section id="home-content">
+        <div class="container">
+            <h1>Welcome to ShopZone</h1>
+            <h4>Your favorite online store</h4>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search for items...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+
+            <section id="promotions">
+                <h2>Special Offer</h2>
+                <marquee behavior="scroll" direction="left" scrollamount="5">
+                    <div class="banner">
+                        <p>Get 20% off on your first purchase! Use code: WELCOME20</p>
+                    </div>
+                </marquee>
+            </section>
+
+            <section id="categories">
+                <h2>Categories</h2>
+                <div class="categories-grid">
+                    <div class="category">
+                        <a href="cloth.html">
+                            <img src="https://imgs.search.brave.com/DDdx76PeQK0awpaEkUiq2QEoGFcORFYB6r2UCD7Fd4Y/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE0/OTUxMjE2MDUxOTMt/YjExNmI1YjljNWZl/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjAuMyZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE1URjhmR05z/YjNSb1pYTjhaVzU4/TUh4OE1IeDhmREE9.jpeg" alt="Clothing & Apparel">
+                            <p>Clothing & Apparel</p>
+                        </a>
+                    </div>
+                    <div class="category">
+                        <a href="electronic.html">
+                            <img src="https://imgs.search.brave.com/mObEJvOt1PnV-uT4-KJ6IqhPxv80k6LBykbJ7ezSEyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9lY29tbWVyY2Ut/aW50ZXJuZXQtb25s/aW5lLXNob3BwaW5n/LWRlbGl2ZXJ5LWNv/bmNlcHQtaG91c2Vo/b2xkLWtpdGNoZW4t/YXBwbGlhbmNlcy1o/b21lLXRlY2huaWNz/LWJveGVzXzUwNTA4/MC0xNTQzLmpwZz9z/aXplPTYyNiZleHQ9/anBn" alt="Electronics & Appliances">
+                            <p>Electronics & Appliances</p>
+                        </a>
+                    </div>
+                    <div class="category">
+                        <a href="beauty.html">
+                            <img src="https://imgs.search.brave.com/z53aMBk71AFcom98OO1D5oNRk7WTuAlGOI6sSOeDGfw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTI2/MTY4NTQ4L3Bob3Rv/L21ha2V1cC1iYWct/d2l0aC12YXJpZXR5/LW9mLWJlYXV0eS1w/cm9kdWN0cy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9d0Q3/NUVlWWxta1k0SWRH/dThPSWlRdGJiUmdj/a2ZsbVBFZ1FTcWtf/NC1Edz0" alt="Beauty & Personal Care">
+                            <p>Beauty & Personal Care</p>
+                        </a>
+                    </div>
+                    <div class="category">
+                        <a href="kid.html">
+                            <img src="https://imgs.search.brave.com/k8FJj5XY1GIGIKq1867_zsGl3FgBYNfciqYMxkzGRDI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFpeWFpT051K0wu/anBn" alt="Baby & Kids">
+                            <p>Baby & Kids</p>
+                        </a>
+                    </div>
+                    <div class="category">
+                        <a href="grocery.html">
+                            <img src="https://imgs.search.brave.com/slAbXZtM578lPuc6gLpuO5bLZC1oPJNtW5IMQQV7bMA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDk5/Mzc2OTcxL3Bob3Rv/L2RlbGljaW91cy1w/b3J0aW9uLW9mLWZy/ZXNoLXNhbG1vbi1m/aWxsZXQtd2l0aC1h/cm9tYXRpYy1oZXJi/cy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9cTM5LUNiVko0/SkdxUXM0aGpxa2h6/U055dnk3dGx4anZu/NU5xVkZheVcwUT0" alt="Groceries">
+                            <p>Groceries</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <p>"Great selection of items and excellent service!" - Jane Doe</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I always love the new arrivals. Always find something interesting." <br>- John Smith</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Fast delivery and the items are in great condition. Highly recommended!" <br>- Alice Johnson</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Customer service is top-notch. They resolved my issue quickly and professionally." <br>- Robert Brown</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Fantastic range of collection. I always find something I like." <br>- Emily Davis</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ShopZone. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function viewCart() {
+            window.location.href = 'cart.html';
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButtons = document.querySelectorAll('.toggle-items');
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const itemList = this.nextElementSibling;
+
+                    if (itemList.style.display === 'block') {
+                        itemList.style.display = 'none';
+                        this.textContent = 'Show Items';
+                    } else {
+                        itemList.style.display = 'block';
+                        this.textContent = 'Hide Items';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing & Apparel - ShopZone</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .cart-button {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cart-button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://imgs.search.brave.com/e0Uwbx90KOIp_5Zvx9JJMwOi2K1v2Xk71tLBYwQQdws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/MzQzNzkxMy9waG90/by9vbmxpbmUtc2hv/cHBpbmctY2FydC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cVk1WDJoMmtrcTZm/WnpISnB5U3IyQjZ0/OG02RXFKZG5DTFd4/b09YYWJlRT0" class="logo">
+                <h1>ShopZone</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="review.html"><i class="fas fa-book"></i> Review</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="clothing-content">
+        <div class="container">
+            <h1>Clothing & Apparel</h1>
+            <h4>Explore our latest collection</h4>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="https://cdn11.bigcommerce.com/s-69w9v8rd/images/stencil/500x659/products/41861/27882/740968-5708_74613.1676923973.800.800_28131.1707171236.jpg?c=2" alt="T-Shirt">
+                    <p>T-Shirt</p>
+                    <button onclick="addToCart('T-Shirt')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230913/LumX/6500c4f1afa4cf41f5df7419/-473Wx593H-466566407-blue-MODEL.jpg" alt="Jeans">
+                    <p>Jeans</p>
+                    <button onclick="addToCart('Jeans')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://www.jiomart.com/images/product/original/rv2nrpbifg/m-mart-long-flared-round-neck-kurti-3-4-sleeve-flared-kurti-product-images-rv2nrpbifg-0-202211142105.jpg?im=Resize=(500,630)" alt="Dress">
+                    <p>Kurties</p>
+                    <button onclick="addToCart('Kurties')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/444970/item/goods_08_444970.jpg?width=494" alt="Jacket">
+                    <p>Jacket</p>
+                    <button onclick="addToCart('Jacket')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/365430631/LB/YJ/FA/6215968/casual-women-shoes.jpg" alt="Shoes">
+                    <p>Shoes</p>
+                    <button onclick="addToCart('Shoes')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://ramrajcotton.in/cdn/shop/products/Untitled-3_0029_DSC09279D_0003_DSC09670_0027_DSC09947.jpg?v=1633611597" alt="Leggings">
+                    <p>Leggings</p>
+                    <button onclick="addToCart('Leggings')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://5.imimg.com/data5/AS/TH/BQ/SELLER-71697535/trendy-hand-bag.jpg" alt="Handbag">
+                    <p>Handbag</p>
+                    <button onclick="addToCart('Handbag')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://trendwati.in/wp-content/uploads/2021/08/Buy-Multi-Color-Plain-Silk-Saree-Lace-Border-Online.jpg" alt="Saree">
+                    <p>Saree</p>
+                    <button onclick="addToCart('Saree')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://i.pinimg.com/736x/d8/4a/7f/d84a7f175a7f8e7077172e7c42d50bec.jpg" alt="Sunglass">
+                    <p>Lehenga</p>
+                    <button onclick="addToCart('Lehenga')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://sslimages.shoppersstop.com/sys-master/images/h83/h0c/30458819870750/G2155BLACK_BLACK_alt1.jpg_2000Wx3000H" alt="Sandals">
+                    <p>Sandals</p>
+                    <button onclick="addToCart('Sandals')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="cart-button" onclick="viewCart()">View Cart</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ShopZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(itemName) {
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItems.push(itemName);
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            alert(itemName + " has been added to your cart.");
+        }
+
+        function viewCart() {
+            window.location.href = "cart.html";
+        }
+    </script>
+</body>
+</html>

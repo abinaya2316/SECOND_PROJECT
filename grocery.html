@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groceries - ShopZone</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .cart-button {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cart-button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://imgs.search.brave.com/e0Uwbx90KOIp_5Zvx9JJMwOi2K1v2Xk71tLBYwQQdws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/MzQzNzkxMy9waG90/by9vbmxpbmUtc2hv/cHBpbmctY2FydC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cVk1WDJoMmtrcTZm/WnpISnB5U3IyQjZ0/OG02RXFKZG5DTFd4/b09YYWJlRT0" class="logo" alt="ShopZone Logo">
+                <h1>ShopZone</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="review.html"><i class="fas fa-book"></i> Review</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="groceries-content">
+        <div class="container">
+            <h1>Groceries</h1>
+            <h4>Fresh and Quality Groceries Delivered to Your Doorstep</h4>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="https://chheda.store/wp-content/uploads/2020/12/mix-dry-fruits-500x500-1.jpg" alt="Dry Fruits">
+                    <p>Dry Fruits</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dry Fruits')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/6/XP/MZ/OO/90989580/horlicks-health-nutrition-drink.jpg" alt="Nutrition Drinks">
+                    <p>Nutrition Drinks</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nutrition Drinks')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://img.freepik.com/premium-photo/flour-package-box-isolated-white-transparent-background_771335-65572.jpg" alt="Flours">
+                    <p>Flours</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Flours')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://5.imimg.com/data5/WK/AX/LU/SELLER-258046/foxtail-millet-grains-250x250.jpg" alt="Grains">
+                    <p>Grains</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Grains')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://storage.googleapis.com/wzukusers/user-34708702/images/5dac94c2403f2Z6aijr4/snacks1_d600.jpg" alt="Snacks and Beverages">
+                    <p>Snacks and Beverages</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Snacks and Beverages')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/9/UM/UG/OL/147012274/daily-use-refined-oil.jpeg" alt="Refined Oil">
+                    <p>Refined Oil</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Refined Oil')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://img1.exportersindia.com/product_images/bc-full/dir_168/5022910/canned-food-1500367757-3158760.jpeg" alt="Canned Goods">
+                    <p>Canned Goods</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Canned Goods')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://www.allrecipes.com/thmb/W66rurgV3YA2kk7EMcoUSrI6GSE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/baking-ingredients-photo-by-brett-stevens-GettyImages-148198912-19cca7bea03e418db3977eeb36966f78.jpg" alt="Baking Essentials">
+                    <p>Baking Essentials</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Baking Essentials')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://farelabs.com/wp-content/uploads/22-Different-Spices-and-Herbs-and-How-to-Use-Them-768x538-1.webp" alt="Spices and Condiments">
+                    <p>Spices and Condiments</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Spices and Condiments')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrsvQgsGf9e-DYeqhzoa4khXwr7hz3ssQ4pW6e_UGDAPr5nEDUuA25ZyyJwaNEMN2484&usqp=CAU" alt="Breakfast Cereals">
+                    <p>Breakfast Cereals</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Breakfast Cereals')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="cart-button" onclick="viewCart()">View Cart</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ShopZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(itemName) {
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItems.push(itemName);
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            alert(itemName + " has been added to your cart.");
+        }
+
+        function viewCart() {
+            window.location.href = "cart.html";
+        }
+    </script>
+</body>
+</html>

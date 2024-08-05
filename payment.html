@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - ShopZone</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .payment-container {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 800px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .payment-container h2 {
+            margin-top: 0;
+        }
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+        }
+        .payment-option {
+            margin-bottom: 15px;
+        }
+        .payment-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        .payment-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .payment-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://imgs.search.brave.com/e0Uwbx90KOIp_5Zvx9JJMwOi2K1v2Xk71tLBYwQQdws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/MzQzNzkxMy9waG90/by9vbmxpbmUtc2hv/cHBpbmctY2FydC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cVk1WDJoMmtrcTZm/WnpISnB5U3IyQjZ0/OG02RXFKZG5DTFd4/b09YYWJlRT0" class="logo">
+                <h1>ShopZone</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="review.html"><i class="fas fa-book"></i> Review</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="payment-container">
+        <h2>Payment Options</h2>
+        <form id="payment-form">
+            <div class="payment-options">
+                <div class="payment-option">
+                    <input type="radio" id="credit-card" name="payment-method" value="Credit Card" checked>
+                    <label for="credit-card">Credit Card</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="paypal" name="payment-method" value="PayPal">
+                    <label for="paypal">PayPal</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="bank-transfer" name="payment-method" value="Bank Transfer">
+                    <label for="bank-transfer">Bank Transfer</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="crypto" name="payment-method" value="Cryptocurrency">
+                    <label for="crypto">Cryptocurrency</label>
+                </div>
+            </div>
+            <button type="button" class="payment-button" onclick="submitPayment()">Submit Payment</button>
+        </form>
+    </div>
+
+
+    <script>
+        function submitPayment() {
+            const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+            alert(`You selected ${selectedPaymentMethod}. Payment processing will be implemented soon.`);
+            // Implement further functionality for processing the payment
+        }
+    </script>
+</body>
+</html>

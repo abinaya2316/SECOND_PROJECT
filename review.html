@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightpink;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li a i {
+            margin-right: 5px;
+        }
+        .cart-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cart-button:hover {
+            background-color: #0056b3;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        .hidden {
+            display: none;
+        }
+        .error {
+            color: red;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://imgs.search.brave.com/e0Uwbx90KOIp_5Zvx9JJMwOi2K1v2Xk71tLBYwQQdws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/MzQzNzkxMy9waG90/by9vbmxpbmUtc2hv/cHBpbmctY2FydC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cVk1WDJoMmtrcTZm/WnpISnB5U3IyQjZ0/OG02RXFKZG5DTFd4/b09YYWJlRT0" class="logo" alt="ShopZone Logo">
+                <h1>ShopZone</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="review.html"><i class="fas fa-book"></i> Review</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cart-button" onclick="viewCart()">View Cart</button>
+        </div>
+    </header>
+
+    <h1>Product Review</h1>
+    <form id="reviewForm">
+        <label for="customerId">Customer ID:</label>
+        <input type="text" id="customerId" required>
+        <button type="button" onclick="validateCustomer()">Validate Customer</button>
+        <div id="validationError" class="error hidden">Invalid Customer ID</div>
+        <div id="reviewSection" class="hidden">
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" accept="image/*" required>
+            <label for="rating">Rating:</label>
+            <select id="rating" required>
+                <option value="">Select a rating</option>
+                <option value="1">1 - Very Poor</option>
+                <option value="2">2 - Poor</option>
+                <option value="3">3 - Average</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+            <label for="command">Command:</label>
+            <input type="text" id="command" required>
+            <button type="submit">Submit Review</button>
+        </div>
+    </form>
+
+    <script>
+        function validateCustomer() {
+            const customerId = document.getElementById('customerId').value;
+            const validationError = document.getElementById('validationError');
+            const reviewSection = document.getElementById('reviewSection');
+            const validCustomerIds = ['123', '456', '789'];
+            if (validCustomerIds.includes(customerId)) {
+                validationError.classList.add('hidden');
+                reviewSection.classList.remove('hidden');
+            } else {
+                validationError.classList.remove('hidden');
+                reviewSection.classList.add('hidden');
+            }
+        }
+
+        function viewCart() {
+            window.location.href = 'cart.html';
+        }
+
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const photo = document.getElementById('photo').files[0];
+            const rating = document.getElementById('rating').value;
+            const command = document.getElementById('command').value;
+            console.log('Photo:', photo);
+            console.log('Rating:', rating);
+            console.log('Command:', command);
+            alert('Review submitted successfully!');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby and Kids - ShopZone</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .cart-button {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cart-button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://imgs.search.brave.com/e0Uwbx90KOIp_5Zvx9JJMwOi2K1v2Xk71tLBYwQQdws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/MzQzNzkxMy9waG90/by9vbmxpbmUtc2hv/cHBpbmctY2FydC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cVk1WDJoMmtrcTZm/WnpISnB5U3IyQjZ0/OG02RXFKZG5DTFd4/b09YYWJlRT0" class="logo">
+                <h1>ShopZone</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="review.html"><i class="fas fa-book"></i> Review</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="baby-kids-content">
+        <div class="container">
+            <h1>Baby and Kids</h1>
+            <h4>Find the Best Products for Your Little Ones</h4>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="https://staranddaisy.in/wp-content/uploads/2023/05/ultra-baby-stroller-pram-buggy-grey-8723-main.jpg" alt="Baby Stroller">
+                    <p>Baby Stroller</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Baby Stroller')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://www.shutterstock.com/image-photo/set-different-cute-toys-on-600nw-1849897198.jpg" alt="Kids' Toy Set">
+                    <p>Kids' Toy Set</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Kids\' Toy Set')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://polkatots.in/cdn/shop/files/WCRW1073.jpg?v=1713861017&width=1445" alt="Crib">
+                    <p>Baby Crib</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Baby Crib')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/41z7DwyGCOL.AC.jpg" alt="Diaper Bag">
+                    <p>Diapers</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Diapers')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDFgzwLLt0CN4aEGhyaywJofJZOojeJTXqKOyhcYi2nCtot3u6DyveR3-MnbYqErOnWvs&usqp=CAU" alt="Baby Monitor">
+                    <p>Dresses</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dresses')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://res.cloudinary.com/joinventures/f_auto,q_auto,t_pnopt19prodlp/products/p-baby-care-kit-set-of-7-235927-m.jpg" alt="Kids' Bedtime Storybook">
+                    <p>Baby care kit</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Baby care kit')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://pictures-ghana.jijistatic.net/34005211_NjIwLTcwOC1hNmYyYWI0NGYw.webp" alt="Baby Bath Set">
+                    <p>Baby Bath Set</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Baby Bath Set')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxYp0h7gwt4Wcq1qYUnmYi7W-kbOU8GdfRug&s" alt="Baby Carrier">
+                    <p>Baby Carrier</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Baby Carrier')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src=https://imgs.search.brave.com/qMzI-V1bFjK56Q_05Bm8bLtXWlFDWhH7vgQerlvED1I/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFtb3BTcGdCVUwu/anBn alt="Kids' School Backpack">
+                    <p>Essentials</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Essentials')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/41ZVuMWVytL.QL92_SH45_SS200.jpg" alt="Baby Swing">
+                    <p>Baby Swing</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Baby Swing')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <button class="cart-button" onclick="viewCart()">View Cart</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ShopZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(itemName) {
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItems.push(itemName);
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            alert(itemName + " has been added to your cart.");
+        }
+
+        function viewCart() {
+            window.location.href = "cart.html";
+        }
+    </script>
+</body>
+</html>

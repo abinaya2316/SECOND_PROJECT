@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics - ShopZone</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .cart-button {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cart-button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://imgs.search.brave.com/e0Uwbx90KOIp_5Zvx9JJMwOi2K1v2Xk71tLBYwQQdws/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/MzQzNzkxMy9waG90/by9vbmxpbmUtc2hv/cHBpbmctY2FydC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cVk1WDJoMmtrcTZm/WnpISnB5U3IyQjZ0/OG02RXFKZG5DTFd4/b09YYWJlRT0" class="logo">
+                <h1>ShopZone</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="review.html"><i class="fas fa-book"></i> Review</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="electronics-content">
+        <div class="container">
+            <h1>Electronics</h1>
+            <h4>Discover the latest in technology</h4>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/71kduvIxBVL.jpg" alt="Smartphone">
+                    <p>Smartphone</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Smartphone')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/61+r3+JstZL.AC_UF1000,1000_QL80.jpg" alt="Laptop">
+                    <p>Laptop</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Laptop')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/69/1169495_smart-tv-40-samsung-led-full-hd-t5300-tizen-2020-com-wifi-hdr-2-hdmi-1-usb_m18_637834501144683382.jpg" alt="Television">
+                    <p>Smart Television</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Smart Television')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://images-cdn.ubuy.com.sa/658ae9bb579b2e7e09069d4c-apple-airpods-2nd-generation-bluetooth.jpg" alt="Headphones">
+                    <p>Headphones</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Headphones')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQV2_ReE8ymIDyBxvjQtdkdM8dH-C6vEyuJw&s" alt="Smart Watch">
+                    <p>Smart Watch</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Smart Watch')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://d287ku8w5owj51.cloudfront.net/images/products/hero/creative-sbs-e2900/e2900_MHL_pdt.png" alt="Speakers">
+                    <p>Speakers</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Speakers')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://images-cdn.ubuy.co.in/65979c2cb910f53d2e6e34ae-3-5cu-ft-compact-refrigerator-mini.jpg" alt="Refrigerator">
+                    <p>Refrigerator</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Refrigerator')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://img.freepik.com/premium-photo/air-conditioner-design-hd-8k-wallpaper-stock-photographic-image_890746-39745.jpg" alt="Air Conditioner">
+                    <p>Air Conditioner</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Air Conditioner')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://images-cdn.ubuy.co.in/65130e5fc8264e1adc34a41b-standard-hd-1608-1500w-1-8l-stainless.jpg" alt="Kettle">
+                    <p>Kettle</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Kettle')">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://images.jdmagicbox.com/quickquotes/images_main/whirlpool_360_degree_bloomwash_ultra_fully_automatic_top_load_washing_machine_7_kg_graphite__27148135_0.jpg" alt="Washing Machine">
+                    <p>Washing Machine</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Washing Machine')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="cart-button" onclick="viewCart()">View Cart</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ShopZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(itemName) {
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItems.push(itemName);
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            alert(itemName + " has been added to your cart.");
+        }
+
+        function viewCart() {
+            window.location.href = "cart.html";
+        }
+    </script>
+</body>
+</html>
